@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="screen" />
+
+	<title>{% block title %}{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+<div class="logo">
+<a href="{% url 'index' %}">luna healing</a>
+<br/>
+<span class="small">experience the gentle transformative power of reiki</span>
+</div>
+
+<div class="spacing_top">
+{% block content %}{% endblock %}
+</div>
+
+<div class="tiny">
+{% block footer %}
+    Jessamyn Smith
+{% endblock %}
+</div>
+
+</body>
+
+</html>

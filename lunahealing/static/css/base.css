@@ -1,0 +1,46 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0px;
+    /*background-color: #FFFFF5;*/
+    background-color: #FDFFF5;
+    color: #00297A;
+}
+
+div {
+    margin: 0px;
+    padding: 10px;
+}
+
+.header {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.logo {
+    background-color: #1947A3;
+    color: #FFFFCC;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.logo a:link, .logo a:visited, .logo a:hover, .logo a:active {
+    color: #FFFFCC;
+    text-decoration: none;
+}
+
+.logo div {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.small {
+    font-size: 12pt;
+}
+
+.tiny {
+    font-size: 10pt;
+}
+
+.spacing_top {
+    margin-top: 10px;
+}
