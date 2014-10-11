@@ -4,6 +4,8 @@ import os
 
 HOME_DIR = os.path.expanduser("~")
 
+SECRET_KEY = ')7b)xf5r($em5_h%=bnsomcb)40118-lj))!dxlyk3^uzj8bv3'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 

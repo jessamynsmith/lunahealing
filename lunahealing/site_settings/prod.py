@@ -3,6 +3,9 @@ import os
 
 from lunahealing.site_settings.common import *
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES = {

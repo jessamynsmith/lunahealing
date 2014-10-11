@@ -5,13 +5,9 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')7b)xf5r($em5_h%=bnsomcb)40118-lj))!dxlyk3^uzj8bv3'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
+DEBUG = False
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
