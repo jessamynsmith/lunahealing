@@ -39,4 +39,4 @@ INSTALLED_APPS.extend([
     'storages',
 ])
 
-ALLOWED_HOSTS = ['lunahealing.herokuapp.com', '*.lunahealing.ca']
+ALLOWED_HOSTS = ['lunahealing.herokuapp.com', 'www.lunahealing.ca']
