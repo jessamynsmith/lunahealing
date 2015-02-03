@@ -1,5 +1,3 @@
-# Django settings for lunahealing project.
-
 import os
 
 

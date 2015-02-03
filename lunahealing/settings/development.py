@@ -1,4 +1,4 @@
-from lunahealing.site_settings.common import *
+from lunahealing.settings.common import *
 
 import os
 
