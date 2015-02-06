@@ -20,27 +20,12 @@ DATABASES = {
         }
 }
 
-MEDIA_ROOT = '/tmp/media'
-MEDIA_URL = ''
-
 STATIC_ROOT = '/tmp/static'
-STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+MEDIA_ROOT = '/tmp/media'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = '%s/Development/Django/lunahealing/emails' % HOME_DIR
 
-INSTALLED_APPS.extend([
-    'django_nose',
-])
-
-# Use nose to run all tests
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-
-NOSE_ARGS = [
-    '--cover-branches',
-    '--cover-package=lunahealing',
-    '--cover-inclusive',  # Cover all files
-    '--cover-html',
-    '--cover-html-dir=%s/lunahealing_coverage' % os.environ.get('HOME'),
-]
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
