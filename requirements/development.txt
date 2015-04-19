@@ -1,4 +1,8 @@
 -r common.txt
 coverage==3.7.1
+flake8==2.4.0
+mccabe==0.3
 mock==1.0.1
+pep8==1.5.7
 pipreq==0.4
+pyflakes==0.8.1
