@@ -1,7 +1,7 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
-    background-color: #FDFFF5;
+    background-color: #FFFEEF;
     color: #00297A;
 }
 
@@ -12,7 +12,7 @@ div {
 
 .logo {
     background-color: #1947A3;
-    color: #FFFFCC;
+    color: #FFF3C3;
     font-size: 30px;
     font-weight: bold;
     height: 54px;
