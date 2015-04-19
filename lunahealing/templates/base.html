@@ -2,34 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ STATIC_URL }}images/web_icon.png"/>
 
-    {% load staticfiles %}
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="screen" />
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="screen"/>
 
-	<title>{% block title %}{% endblock %}</title>
+  <title>{% block title %}{% endblock %}</title>
 
-    {% block head %}{% endblock %}
+  {% block head %}{% endblock %}
 </head>
 
 <body>
 
 <div class="logo">
-<a class="brand" href="{% url 'index' %}">
+  <a class="brand" href="{% url 'index' %}">
     <img src="{{ STATIC_URL }}images/logo.png" alt="luna healing logo">
     <span>luna healing</span><br>
     <span class="medium">gentle transformative reiki</span>
-</a>
+  </a>
 </div>
 
 <div class="spacing_top">
-{% block content %}{% endblock %}
+  {% block content %}{% endblock %}
 </div>
 
 {% block footer %}
-    <div class="center">Contact <a href="mailto:jessamyn@lunahealing.ca">Jessamyn Smith</a>
-      for more information or to book an appointment.</div>
-    <div class="small center footer">Version {{ VERSION }}, Deployed {{ DEPLOY_DATE }}</div>
+  <div class="center">Contact <a href="mailto:jessamyn@lunahealing.ca">Jessamyn Smith</a>
+    for more information or to book an appointment.
+  </div>
+  <div class="small center footer">Version {{ VERSION }}, Deployed {{ DEPLOY_DATE }}</div>
 {% endblock %}
 
 </body>

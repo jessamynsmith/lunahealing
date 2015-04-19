@@ -20,10 +20,10 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = '/tmp/static'
+STATIC_ROOT = '/tmp/lunahealing/static'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-MEDIA_ROOT = '/tmp/media'
+MEDIA_ROOT = '/tmp/lunahealing/media'
 
 ALLOWED_HOSTS = ['*']
 SSLIFY_DISABLE = True
