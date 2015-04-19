@@ -15,20 +15,22 @@
 <body>
 
 <div class="logo">
-<a href="{% url 'index' %}">luna healing</a>
-<br/>
-<span class="small">gentle transformative reiki</span>
+<a class="brand" href="{% url 'index' %}">
+    <img src="{{ STATIC_URL }}img/logo.png" alt="luna healing logo">
+    <span>luna healing</span><br>
+    <span class="medium">gentle transformative reiki</span>
+</a>
 </div>
 
 <div class="spacing_top">
 {% block content %}{% endblock %}
 </div>
 
-<div class="tiny">
 {% block footer %}
-    Contact <a href="mailto:jessamyn@lunahealing.ca">Jessamyn Smith</a> for more information or to book an appointment.
+    <div class="center">Contact <a href="mailto:jessamyn@lunahealing.ca">Jessamyn Smith</a>
+      for more information or to book an appointment.</div>
+    <div class="small center footer">Version {{ VERSION }}, Deployed {{ DEPLOY_DATE }}</div>
 {% endblock %}
-</div>
 
 </body>
 

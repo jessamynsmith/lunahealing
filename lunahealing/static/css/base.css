@@ -1,26 +1,21 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    margin: 0px;
-    /*background-color: #FFFFF5;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
     background-color: #FDFFF5;
     color: #00297A;
 }
 
 div {
-    margin: 0px;
+    margin: 0;
     padding: 10px;
-}
-
-.header {
-    font-size: 24pt;
-    font-weight: bold;
 }
 
 .logo {
     background-color: #1947A3;
     color: #FFFFCC;
-    font-size: 24pt;
+    font-size: 30px;
     font-weight: bold;
+    height: 54px;
 }
 
 .logo a:link, .logo a:visited, .logo a:hover, .logo a:active {
@@ -28,19 +23,45 @@ div {
     text-decoration: none;
 }
 
+.brand {
+    float: left;
+    font-weight: bold;
+    line-height: 20px;
+    height: 52px;
+    padding-top: 8px;
+    white-space: nowrap;
+}
+
+.brand img {
+    float: left;
+    margin-right: 10px;
+}
+
 .logo div {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.medium {
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 .small {
-    font-size: 12pt;
+    font-size: 12px;
+    line-height: 10px;
 }
 
-.tiny {
-    font-size: 10pt;
+.center {
+    width: 100%;
+    text-align: center;
 }
 
 .spacing_top {
     margin-top: 10px;
+}
+
+.footer {
+    padding-top: 12px;
+    color: grey;
 }

@@ -6,6 +6,9 @@ Django = 1.8
 psycopg2 = 2.6
 dj-static = 0.0.6
 static3 = 0.5.1
+django-settings-context-processor = 0.2
+python-dateutil = 2.4.2
+six = 1.9.0
 
 [development]
 coverage = 3.7.1
