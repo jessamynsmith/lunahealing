@@ -6,6 +6,7 @@ from email.utils import formataddr
 
 
 BASE_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__),
+                                         os.path.pardir,
                                          os.path.pardir))
 
 ADMINS = (
@@ -31,7 +32,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    BASE_DIR + '/static/',
+    BASE_DIR + '/lunahealing/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -45,7 +46,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    BASE_DIR + '/templates/',
+    BASE_DIR + '/lunahealing/templates/',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
