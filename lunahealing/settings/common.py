@@ -1,12 +1,17 @@
 # Django settings for lunahealing project.
 import os
 
+from email.utils import formataddr
+
+
+BASE_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__),
+                                         os.path.pardir))
+
 ADMINS = (
-    (os.environ.get('ADMIN_NAME'), os.environ.get('ADMIN_EMAIL')),
+    (os.environ.get('ADMIN_NAME', 'admin'), os.environ.get('ADMIN_EMAIL', 'example@example.com')),
 )
 
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
-
 TIME_ZONE = 'America/Toronto'
 
 LANGUAGE_CODE = 'en-us'
@@ -17,9 +22,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-APP_PATH = os.path.realpath(os.path.join(os.path.dirname(__file__),
-                                         os.path.pardir))
-
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
@@ -28,7 +30,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    APP_PATH + '/static/',
+    BASE_DIR + '/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -36,19 +38,6 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
-
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    APP_PATH + '/templates/',
-)
-
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,6 +55,13 @@ ROOT_URLCONF = 'lunahealing.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'lunahealing.wsgi.application'
 
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    BASE_DIR + '/templates/',
+)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,3 +71,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+DEFAULT_FROM_EMAIL = formataddr(ADMINS[0])
+EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER')
+EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT')
+EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN')
+EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD')
+EMAIL_USE_TLS = True

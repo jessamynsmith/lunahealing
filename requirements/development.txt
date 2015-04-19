@@ -1,4 +1,4 @@
 -r common.txt
 coverage==3.7.1
 mock==1.0.1
-pipreq==0.3
+pipreq==0.4

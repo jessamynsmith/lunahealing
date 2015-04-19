@@ -2,17 +2,17 @@
 shared = common
 
 [common]
-Django = 1.7
-psycopg2 = 2.5.4
+Django = 1.8
+psycopg2 = 2.6
 dj-static = 0.0.6
 static3 = 0.5.1
 
 [development]
 coverage = 3.7.1
 mock = 1.0.1
-pipreq = 0.3
+pipreq = 0.4
 
 [production]
 dj-database-url = 0.3.0
-gunicorn = 19.1.1
+gunicorn = 19.3.0
 
