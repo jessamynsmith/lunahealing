@@ -8,6 +8,7 @@ CIRCLE=$1
 DEPLOY_DATE=`date "+%FT%T%z"`
 
 heroku config:set --app=lunahealing \
+NEW_RELIC_APP_NAME='lunahealing' \
 ADMIN_EMAIL="jessamyn@lunahealing.ca" \
 ADMIN_NAME="lunahealing" \
 DJANGO_SETTINGS_MODULE=lunahealing.settings.production \
