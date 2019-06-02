@@ -19,8 +19,7 @@ DEPLOY_DATE="$DEPLOY_DATE" \
 
 if [ $CIRCLE ]
 then
-    git fetch origin --unshallow
-    git push git@heroku.com:lunahealing.git $CIRCLE_SHA1:refs/heads/master
+    git push https://heroku:$HEROKU_API_KEY@git.heroku.com/lunahealing.git master
 else
     git push heroku master
 fi
